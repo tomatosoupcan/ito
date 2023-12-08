@@ -1,0 +1,92 @@
+:root {
+	--startcolor: #FFFFFF;
+	--stopcolor: #FFFFFF;
+}
+
+body{
+  background: linear-gradient(90deg, var(--startcolor), var(--stopcolor));
+}
+
+.texts{
+  position: flex;
+  text-align: center;
+  font-family: "Merienda";
+  font-weight: bold;
+  color: white;
+  font-size: 7vh;
+  width: 40vw;
+}
+
+.left {
+  position: flex;
+  margin-left: 25vw;
+}
+.innertime {
+  position: absolute;
+  top: 20%;
+  transform: translateX(-50%);
+}
+.right {
+  position: flex;
+  margin-left: 75vw;
+}
+
+.numbers {
+  position: absolute;
+  bottom: 20vh;
+  transform: translateX(-50%);
+}
+
+.center {
+  position: flex;
+  margin-left: 50vw;
+}
+
+.line{
+  position: flex;
+  text-align: center;
+  font-family: "Merienda";
+  font-weight: bold;
+  color: white;
+  font-size: 15vh;
+  position: absolute;
+  top: 45%;
+  transform: translateX(-50%);
+}
+
+@media screen and (orientation: portrait) {
+  body{
+    background: linear-gradient(0deg, var(--startcolor), var(--stopcolor));
+    background-size: 100vw 100vh;
+  }
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .line{
+      font-size: 15vw;
+  }
+  .center {
+  margin-left: 50vh;
+  }
+  .texts{
+  font-size: 7vw;
+  width: 40vh;
+  }
+  .left {
+    margin-left: 25vh;
+  }
+  .right {
+    margin-left: 75vh;
+  }
+  .numbers {
+    bottom: 20vw;
+  }
+  
+}
